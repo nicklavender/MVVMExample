@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable name="gameViewModel"
+                  type="com.example.nickl.mvvmexample.viewmodel.TicTacViewModel"/>
+    </data>
+
+    <GridLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:padding="32dp">
+
+        <TextView
+                android:id="@+id/cell_00"
+                style="@style/CellTextView"
+                android:background="@drawable/cell_11"
+                android:onClick="@{() -> gameViewModel.onClickedCellAt(0, 0)}"
+                android:text='@{gameViewModel.mCells["00"]}'
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"/>
+
+        <TextView
+                android:id="@+id/cell_01"
+                android:background="@drawable/cell_01"
+                style="@style/CellTextView"
+                android:onClick="@{() -> gameViewModel.onClickedCellAt(0, 1)}"
+                android:text='@{gameViewModel.mCells["01"]}'
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+               android:layout_columnWeight="1"/>
+        <TextView
+                android:id="@+id/cell_02"
+                android:background="@drawable/cell_02"
+                style="@style/CellTextView"
+                android:onClick="@{() -> gameViewModel.onClickedCellAt(0, 2)}"
+                android:text='@{gameViewModel.mCells["02"]}'
+                android:layout_column="0"
+                android:layout_row="2"
+                android:layout_rowWeight="1"
+               android:layout_columnWeight="1"/>
+        <TextView
+                android:id="@+id/cell_10"
+                android:background="@drawable/cell_10"
+                style="@style/CellTextView"
+                android:onClick="@{() -> gameViewModel.onClickedCellAt(1, 0)}"
+                android:text='@{gameViewModel.mCells["10"]}'
+                android:layout_column="1"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+               android:layout_columnWeight="1"/>
+        <TextView
+                android:id="@+id/cell_11"
+                style="@style/CellTextView"
+                android:onClick="@{() -> gameViewModel.onClickedCellAt(1, 1)}"
+                android:text='@{gameViewModel.mCells["11"]}'
+                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+               android:layout_columnWeight="1"/>
+        <TextView
+                android:id="@+id/cell_12"
+                android:background="@drawable/cell_12"
+                style="@style/CellTextView"
+                android:onClick="@{() -> gameViewModel.onClickedCellAt(1, 2)}"
+                android:text='@{gameViewModel.mCells["12"]}'
+                android:layout_column="1"
+                android:layout_row="2"
+                android:layout_rowWeight="1"
+               android:layout_columnWeight="1"/>
+        <TextView
+                android:id="@+id/cell_20"
+                android:background="@drawable/cell_20"
+                style="@style/CellTextView"
+                android:onClick="@{() -> gameViewModel.onClickedCellAt(2, 0)}"
+                android:text='@{gameViewModel.mCells["20"]}'
+                android:layout_column="2"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+               android:layout_columnWeight="1"/>
+        <TextView
+                android:id="@+id/cell_21"
+                android:background="@drawable/cell_21"
+                style="@style/CellTextView"
+                android:onClick="@{() -> gameViewModel.onClickedCellAt(2, 1)}"
+                android:text='@{gameViewModel.mCells["21"]}'
+                android:layout_column="2"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+               android:layout_columnWeight="1"/>
+        <TextView
+                android:id="@+id/cell_22"
+                android:background="@drawable/cell_11"
+                style="@style/CellTextView"
+                android:onClick="@{() -> gameViewModel.onClickedCellAt(2, 2)}"
+                android:text='@{gameViewModel.mCells["22"]}'
+                android:layout_column="2"
+                android:layout_row="2"
+                android:layout_rowWeight="1"
+               android:layout_columnWeight="1"/>
+
+    </GridLayout>
+</layout>

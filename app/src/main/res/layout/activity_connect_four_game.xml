@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.example.nickl.mvvmexample.R"/>
+        <variable name="connectFourViewModel"
+                  type="com.example.nickl.mvvmexample.viewmodel.ConnectFourViewModel"/>
+    </data>
+
+    <GridLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="7"
+                android:rowCount="6">
+        <TextView
+                android:id="@+id/cf_cell_00"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["00"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["00"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(0, 0)}"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_width="@dimen/connect_four_width"
+                android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_01"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["01"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["01"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(0, 1)}"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_02"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["02"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["02"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(0, 2)}"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_03"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["03"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["03"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(0, 3)}"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_04"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["04"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["04"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(0, 4)}"
+                android:layout_row="0"
+                android:layout_column="4"
+                android:shadowColor="@color/colorPrimary"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_05"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["05"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["05"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(0, 5)}"
+                android:layout_row="0"
+                android:layout_column="5"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_06"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["06"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["06"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(0, 6)}"
+                android:layout_row="0"
+                android:layout_column="6"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_10"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["10"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["10"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(1, 0)}"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_11"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["11"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["11"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(1, 1)}"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_12"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["12"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["12"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(1, 2)}"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_13"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["13"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["13"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(1, 3)}"
+                android:layout_row="1"
+                android:layout_column="3"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_14"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["14"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["14"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(1, 4)}"
+                android:layout_row="1"
+                android:layout_column="4"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_16"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["16"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["16"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(1, 6)}"
+                android:layout_row="1"
+                android:layout_column="6"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_20"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["20"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["20"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(2, 0)}"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_15"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["15"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["15"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(1, 5)}"
+                android:layout_row="1"
+                android:layout_column="5"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+        <TextView
+                android:id="@+id/cf_cell_21"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["21"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["21"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(2, 1)}"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_22"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["22"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["22"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(2, 2)}"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_23"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["23"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["23"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(2, 3)}"
+                android:layout_row="2"
+                android:layout_column="3"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_24"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["24"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["24"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(2, 4)}"
+                android:layout_row="2"
+                android:layout_column="4"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_25"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["25"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["25"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(2, 5)}"
+                android:layout_row="2"
+                android:layout_column="5"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_26"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["26"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["26"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(2, 6)}"
+                android:layout_row="2"
+                android:layout_column="6"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_30"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["30"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["30"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(3, 0)}"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_31"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["31"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["31"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(3, 1)}"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_32"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["32"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["32"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(3, 2)}"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_33"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["33"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["33"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(3, 3)}"
+                android:layout_row="3"
+                android:layout_column="3"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_34"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["34"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["34"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(3, 4)}"
+                android:layout_row="3"
+                android:layout_column="4"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_35"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["35"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["35"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(3, 5)}"
+                android:layout_row="3"
+                android:layout_column="5"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_36"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["36"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["36"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(3, 6)}"
+                android:layout_row="3"
+                android:layout_column="6"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+
+        <TextView
+                android:id="@+id/cf_cell_40"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["40"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["40"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(4, 0)}"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_41"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["41"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["41"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(4, 1)}"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_42"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["42"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["42"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(4, 2)}"
+                android:layout_row="4"
+                android:layout_column="2"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_43"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["43"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["43"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(4, 3)}"
+                android:layout_row="4"
+                android:layout_column="3"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_44"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["44"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["44"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(4, 4)}"
+                android:layout_row="4"
+                android:layout_column="4"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_45"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["45"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["45"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(4, 5)}"
+                android:layout_row="4"
+                android:layout_column="5"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_46"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["46"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["46"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(4, 6)}"
+                android:layout_row="4"
+                android:layout_column="6"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_50"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["50"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["50"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(5, 0)}"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_51"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["51"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["51"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(5, 1)}"
+                android:layout_row="5"
+                android:layout_column="1"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_52"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["52"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["52"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(5, 2)}"
+                android:layout_row="5"
+                android:layout_column="2"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_53"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["53"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["53"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(5, 3)}"
+                android:layout_row="5"
+                android:layout_column="3"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_54"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["54"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["54"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(5, 4)}"
+                android:layout_row="5"
+                android:layout_column="4"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_55"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["55"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["55"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(5, 5)}"
+                android:layout_row="5"
+                android:layout_column="5"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+        <TextView
+                android:id="@+id/cf_cell_56"
+                style="@style/CellTextView"
+                android:background='@{connectFourViewModel.mConnectFourCells["56"] == "red" ? @drawable/connect_four_red : connectFourViewModel.mConnectFourCells["56"] == "black" ? @drawable/connect_four_black : @drawable/connect_four_empty}'
+                android:onClick="@{() -> connectFourViewModel.onClickedCellAt(5, 6)}"
+                android:layout_row="5"
+                android:layout_column="6"
+                android:layout_width="@dimen/connect_four_width"
+               android:layout_height="@dimen/connect_four_height"/>
+
+    </GridLayout>
+</layout>
