@@ -40,6 +40,10 @@ public class ConnectFourGameActivity extends AppCompatActivity {
         switch (switchItem) {
             case R.id.undo: {
                 mConnectFourViewModel.undoLastMove();
+                break;
+            }
+            case R.id.game_select: {
+                //TODO: back to game select
             }
         }
         return true;
